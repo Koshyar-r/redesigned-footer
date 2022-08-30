@@ -38,6 +38,13 @@ body, button {
 .footer h4, .footer p, .copyright__text {
     color: #FFF;
 }
+.footer__description {
+    font-size: 14px;
+    text-align: right;
+}
+.about__logos {
+    font-size: 12px;
+}
 .footer img {
     user-select: none;
 }
@@ -55,7 +62,7 @@ body, button {
     gap: 2rem;
 }
 .footer__logos img {
-    width: 30px;
+    width: 50px;
 }
 .container {
     max-width: 1170px;
@@ -88,6 +95,7 @@ body, button {
     padding-right: 5px;
 }
 .footer__button {
+    text-decoration: none;
     background-color: #FFF;
     color: var(--primary-color);
     outline: none;
@@ -138,6 +146,21 @@ body, button {
 @media (max-width: 574px) {
     .footer-col {
         width: 100%;
+    }
+    .row {
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    .footer__logo {
+        width: 80px;
+    }
+    .footer__logos img {
+        width: 50px;
+    }
+    .logo__container {
+        align-items: center;
+        text-align: center;
     }
     .footer__icons {
         position: static;
