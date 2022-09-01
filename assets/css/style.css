@@ -28,8 +28,7 @@ body, button {
     background: -moz-radial-gradient(circle, hsla(264, 96%, 47%, 1) 0%, hsla(300, 94%, 34%, 1) 100%);
     background: -webkit-radial-gradient(circle, hsla(264, 96%, 47%, 1) 0%, hsla(300, 94%, 34%, 1) 100%);
     filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#6205ED", endColorstr="#A705A7", GradientType=1 );
-    padding: 70px 0;
-    position: relative;
+    padding: 70px 0 10px 0;
 }
 .footer ul {
     list-style: none;
@@ -121,9 +120,12 @@ body, button {
     transform: scale(1.1)
 }
 .footer__icons {
-    position: absolute;
-    left: 1.5rem;
-    bottom: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 40px;
+}
+.icons {
     display: flex;
     gap: 1rem;
 }
@@ -144,9 +146,6 @@ body, button {
     transform: scale(1.2);
 }
 .copyright__text {
-    position: absolute;
-    bottom: 1.5rem;
-    right: 1.5rem;
     font-size: 12px;
 }
 @media (max-width: 767px) {
@@ -172,13 +171,14 @@ body, button {
         text-align: center;
     }
     .footer__icons {
-        position: static;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
+        gap: 1.5rem;
+        margin-top: 50px;
         margin-bottom: 40px;
     }
     .copyright__text {
-        position: static;
         text-align: center;
     }
 }
