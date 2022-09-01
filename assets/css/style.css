@@ -23,8 +23,11 @@ body, button {
     font-weight: var(--persian-font-weight);
 }
 .footer {
-    background: var(--primary-color);
-    background: radial-gradient(circle, var(--primary-color) 0%, var(--secondary-color) 100%);
+    background: hsla(264, 96%, 47%, 1);
+    background: radial-gradient(circle, hsla(264, 96%, 47%, 1) 0%, hsla(300, 94%, 34%, 1) 100%);
+    background: -moz-radial-gradient(circle, hsla(264, 96%, 47%, 1) 0%, hsla(300, 94%, 34%, 1) 100%);
+    background: -webkit-radial-gradient(circle, hsla(264, 96%, 47%, 1) 0%, hsla(300, 94%, 34%, 1) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#6205ED", endColorstr="#A705A7", GradientType=1 );
     padding: 70px 0;
     position: relative;
 }
@@ -40,7 +43,7 @@ body, button {
 }
 .footer__description {
     font-size: 14px;
-    text-align: right;
+    text-align: center;
 }
 .about__logos {
     font-size: 12px;
@@ -55,14 +58,17 @@ body, button {
     gap: 1rem;
 }
 .footer__logo {
-    width: 50px;
+    width: 60px;
 }
 .footer__logos {
     display: flex;
-    gap: 2rem;
+    gap: 1rem;
 }
-.footer__logos img {
-    width: 50px;
+.efset__logo {
+    width: 40px;
+}
+.ff__logo, .shinshu__logo {
+    width: 90px;
 }
 .container {
     max-width: 1170px;
@@ -78,6 +84,9 @@ body, button {
 .footer-col {
     width: 25%;
     padding: 0 15px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 .footer-col h4 {
     font-size: 18px;
@@ -89,6 +98,8 @@ body, button {
 .footer-col ul li a {
     display: block;
     transition: all 0.5s ease;
+    font-size: 15px;
+    text-align: center;
 }
 .footer-col ul li a:hover {
     color: #FFF;
@@ -119,10 +130,10 @@ body, button {
 .footer__icons a {
     background-color: #FFF;
     color: var(--primary-color);
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     border-radius: 50%;
-    width: 45px;
-    height: 45px;
+    width: 40px;
+    height: 40px;
     padding: 10px;
     display: flex;
     justify-content: center;
@@ -136,6 +147,7 @@ body, button {
     position: absolute;
     bottom: 1.5rem;
     right: 1.5rem;
+    font-size: 12px;
 }
 @media (max-width: 767px) {
     .footer-col {
@@ -150,13 +162,10 @@ body, button {
     .row {
         align-items: center;
         justify-content: center;
-        text-align: center;
+        gap: 1.5rem;
     }
     .footer__logo {
         width: 80px;
-    }
-    .footer__logos img {
-        width: 50px;
     }
     .logo__container {
         align-items: center;
